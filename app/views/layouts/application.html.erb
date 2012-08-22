@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Caroline Klaar Photography &copy;</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= stylesheet_link_tag    "style", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+	<link href='http://fonts.googleapis.com/css?family=Oswald' rel='stylesheet' type='text/css' />
+		<script id="previewTmpl" type="text/x-jquery-tmpl">
+			<div id="ib-img-preview" class="ib-preview">
+                <img src="${src}" alt="" class="ib-preview-img"/>
+                <span class="ib-preview-descr" style="display:none;">${description}</span>
+                <div class="ib-nav" style="display:none;">
+                    <span class="ib-nav-prev">Previous</span>
+                    <span class="ib-nav-next">Next</span>
+                </div>
+                <span class="ib-close" style="display:none;">Close Preview</span>
+                <div class="ib-loading-large" style="display:none;">Loading...</div>
+            </div>		
+		</script>
+		<script id="contentTmpl" type="text/x-jquery-tmpl">	
+			<div id="ib-content-preview" class="ib-content-preview">
+                <div class="ib-teaser" style="display:none;">{{html teaser}}</div>
+                <div class="ib-content-full" style="display:none;">{{html content}}</div>
+                <span class="ib-close" style="display:none;">Close Preview</span>
+            </div>
+		</script>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>

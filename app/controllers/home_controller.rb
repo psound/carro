@@ -8,6 +8,7 @@ class HomeController < ApplicationController
     images = coder.decode(rss)
     doc = Nokogiri::HTML( images)
     img_s = doc.css('img').map{ |i| i['src'] }
-    @img_srcs = coder.decode(img_s)
+    img_sr = img_s.shuffle
+    @img_srcs = coder.decode(img_sr)
   end
 end

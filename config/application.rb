@@ -56,6 +56,7 @@ module Carro
     # Enable the asset pipeline
     config.assets.enabled = true
     
+    config.assets.precompile += ['reset.css']
     config.assets.precompile += ['style.css']
 
     # Version of your assets, change this if you want to expire all your assets
